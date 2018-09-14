@@ -7,7 +7,9 @@ export default {
 		const command = args[0];
 
 		if (!command) {
-			const embed = new RichEmbed().setTitle('Command List');
+			const embed = new RichEmbed()
+				.setTitle('Command List')
+				.setDescription(`Run \`${config.prefix}help <command>\` for usage details.`);
 
 			for (const [name, commandObj] of client.commands) {
 				embed.addField(config.prefix + name, commandObj.help.description);
@@ -32,6 +34,6 @@ export default {
 	},
 	help: {
 		usage: 'help <command [optional]>',
-		description: 'Displays all available commands or displays usage information for a single command'
+		description: 'Displays all available commands or displays usage information for a single command.'
 	}
 } as Command;
