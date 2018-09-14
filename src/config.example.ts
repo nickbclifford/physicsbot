@@ -1,4 +1,9 @@
 export default {
 	token: '',
-	prefix: '->'
+	prefix: '->',
+	hallOfFame: {
+		channel: '',
+		emoji: '',
+		reactionLimit: 3
+	}
 };
