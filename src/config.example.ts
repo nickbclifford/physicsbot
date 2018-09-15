@@ -5,5 +5,7 @@ export default {
 		channel: '',
 		emoji: '',
 		reactionLimit: 3
-	}
+	},
+	wolframAppID: '',
+	botOwnerID: ''
 };
