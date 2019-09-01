@@ -1,6 +1,6 @@
 import { Message, TextChannel } from 'discord.js';
 import config from '../config';
-import { addToHallOfFame } from '../HoF';
+import { addToHallOfFame } from '../hall-of-fame';
 import { Command } from '../types';
 
 export default {

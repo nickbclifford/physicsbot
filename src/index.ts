@@ -2,7 +2,7 @@ import { Client } from 'discord.js';
 import * as fs from 'fs';
 import { promisify } from 'util';
 import config from './config';
-import HoF from './HoF';
+import { hallOfFameReactionHandler } from './hall-of-fame';
 import { Command } from './types';
 
 declare module 'discord.js' {
@@ -50,6 +50,6 @@ client.on('ready', async () => {
 	}
 
 	await client.commands.get(commandName!)!.run(client, message, args);
-}).on('messageReactionAdd', HoF);
+}).on('messageReactionAdd', hallOfFameReactionHandler);
 
 init();

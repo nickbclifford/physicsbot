@@ -31,7 +31,7 @@ export async function addToHallOfFame(message: Message) {
 	await channel.send(embed);
 }
 
-export default async (messageReaction: MessageReaction) => {
+export async function hallOfFameReactionHandler(messageReaction: MessageReaction) {
 	const msg = messageReaction.message;
 
 	if (config.hallOfFame.reactionLimit === 0) {
@@ -49,4 +49,4 @@ export default async (messageReaction: MessageReaction) => {
 	if (messageReaction.emoji.id === emoji.id && messageReaction.count >= config.hallOfFame.reactionLimit) {
 		await addToHallOfFame(msg);
 	}
-};
+}
